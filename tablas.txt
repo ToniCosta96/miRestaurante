@@ -1,0 +1,40 @@
+
+--Tabla vehiculos--------
+Id - int
+Nombre - varchar(255) NOT NULL
+Descripcion - varchar(800)
+Descripcion_corta - varchar(255)
+Imagen - varchar(255)
+Precio - decimal(10,2)
+Fecha_adquisicion - date NOT NULL
+Detalles - varchar(800)
+Kilometros - int
+En_venta - boolean NOT NULL
+Usuario_id - int NULL
+
+--Tabla usuarios--------
+Id - int
+Administrador - boolean
+Nombre - varchar(50)
+Apellidos - varchar(255)
+
+--Sentencia para insertar varios vehiculos--------
+DELETE FROM vehiculo WHERE id<500;
+ALTER TABLE vehiculo AUTO_INCREMENT = 1;
+
+INSERT INTO `vehiculo` (`id`, `nombre`, `descripcion_corta`, `descripcion`, `imagen`, `precio`, `fecha_adquisicion`, `en_venta`, `detalles`, `kilometros`)
+VALUES
+(NULL, 'Vehiculo1', 'Lorem ipsum dolor sitconsectetuer adipiscing elit', 'Lorem ipsum dolor sitconsectetuer adipiscing elitLorem ipsum dolor sitconsectetuer adipiscing elit', 'images/pic12.jpg', '20000', '2017-03-04', '1', '', '100000'),
+(NULL, 'Vehiculo2', 'Lorem ipsum dolor sitconsectetuer adipiscing elit', 'Lorem ipsum dolor sitconsectetuer adipiscing elitLorem ipsum dolor sitconsectetuer adipiscing elit', 'images/pic13.jpg', '22000', '2017-04-09', '1', '', '80000'),
+(NULL, 'Vehiculo3', 'Lorem ipsum dolor sitconsectetuer adipiscing elit', 'Lorem ipsum dolor sitconsectetuer adipiscing elitLorem ipsum dolor sitconsectetuer adipiscing elit', 'images/pic14.jpg', '30000', '2017-04-10', '1', '', '70000'),
+(NULL, 'Vehiculo4', 'Lorem ipsum dolor sitconsectetuer adipiscing elit', 'Lorem ipsum dolor sitconsectetuer adipiscing elitLorem ipsum dolor sitconsectetuer adipiscing elit', 'images/pic15.jpg', '37000', '2017-05-20', '1', '', '150000'),
+(NULL, 'Vehiculo5', 'Lorem ipsum dolor sitconsectetuer adipiscing elit', 'Lorem ipsum dolor sitconsectetuer adipiscing elitLorem ipsum dolor sitconsectetuer adipiscing elit', 'images/pic16.jpg', '14000', '2017-08-02', '1', '', '200000'),
+(NULL, 'Vehiculo6', 'Lorem ipsum dolor sitconsectetuer adipiscing elit', 'Lorem ipsum dolor sitconsectetuer adipiscing elitLorem ipsum dolor sitconsectetuer adipiscing elit Lorem ipsum dolor sitconsectetuer adipiscing elitLorem ipsum dolor sitconsectetuer adipiscing elit Lorem ipsum dolor sitconsectetuer adipiscing elitLorem ipsum dolor sitconsectetuer adipiscing elit ', 'images/pic20.jpg', '25000', '2017-08-11', '1', '', '80000'),
+(NULL, 'Vehiculo7', 'Lorem ipsum dolor sitconsectetuer adipiscing elit', 'Lorem ipsum dolor sitconsectetuer adipiscing elitLorem ipsum dolor sitconsectetuer adipiscing elit', 'images/pic15.jpg', '14000', '2017-08-12', '1', '', '220000'),
+(NULL, 'Vehiculo8', 'Lorem ipsum dolor sitconsectetuer adipiscing elit', 'Lorem ipsum dolor sitconsectetuer adipiscing elitLorem ipsum dolor sitconsectetuer adipiscing elit', 'images/pic12.jpg', '20000', '2017-08-14', '1', '', '190000'),
+(NULL, 'Vehiculo9', 'Lorem ipsum dolor sitconsectetuer adipiscing elit', 'Lorem ipsum dolor sitconsectetuer adipiscing elitLorem ipsum dolor sitconsectetuer adipiscing elit', 'images/pic13.jpg', '30000', '2017-08-15', '1', '', '150000'),
+(NULL, 'Vehiculo10', 'Lorem ipsum dolor sitconsectetuer adipiscing elit', 'Lorem ipsum dolor sitconsectetuer adipiscing elitLorem ipsum dolor sitconsectetuer adipiscing elit', 'images/pic14.jpg', '26000', '2017-08-20', '1', '', '130000'),
+(NULL, 'Vehiculo11', 'Lorem ipsum dolor sitconsectetuer adipiscing elit', 'Lorem ipsum dolor sitconsectetuer adipiscing elitLorem ipsum dolor sitconsectetuer adipiscing elit', 'images/pic15.jpg', '40000', '2017-08-22', '1', '', '50000'),
+(NULL, 'Vehiculo12', 'Lorem ipsum dolor sitconsectetuer adipiscing elit', 'Lorem ipsum dolor sitconsectetuer adipiscing elitLorem ipsum dolor sitconsectetuer adipiscing elit', 'images/pic17.jpg', '12000', '2017-09-04', '1', '', '210000'),
+(NULL, 'Vehiculo13', 'Lorem ipsum dolor sitconsectetuer adipiscing elit', 'Lorem ipsum dolor sitconsectetuer adipiscing elitLorem ipsum dolor sitconsectetuer adipiscing elit', 'images/pic18.jpg', '25000', '2017-09-05', '1', '', '175000'),
+(NULL, 'Vehiculo14', 'Lorem ipsum dolor sitconsectetuer adipiscing elit', 'Lorem ipsum dolor sitconsectetuer adipiscing elitLorem ipsum dolor sitconsectetuer adipiscing elit', 'images/pic19.jpg', '60000', '2017-11-11', '1', '', '130000');
