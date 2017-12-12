@@ -3,6 +3,7 @@
 namespace ProyectoBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Tapas
@@ -25,6 +26,7 @@ class Tapas
      * @var string
      *
      * @ORM\Column(name="nombre", type="string", length=128)
+     * @Assert\NotBlank()
      */
     private $nombre;
 
@@ -39,6 +41,7 @@ class Tapas
      * @var \DateTime
      *
      * @ORM\Column(name="fecha_creacion", type="date")
+     * @Assert\NotBlank()
      */
     private $fechaCreacion;
 
@@ -46,6 +49,11 @@ class Tapas
      * @var string
      *
      * @ORM\Column(name="precio", type="decimal", precision=10, scale=2)
+     * @Assert\NotBlank()
+     * @Assert\GreaterThanOrEqual(
+     *     value = 0,
+     *     message = "Este valor debería ser positivo"
+     * )
      */
     private $precio;
 
@@ -187,4 +195,3 @@ class Tapas
         return $this->foto;
     }
 }
-

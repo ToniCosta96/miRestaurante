@@ -1,0 +1,8 @@
+<h1>{{tapa.nombre}}</h1>
+<p>{{tapa.descripcion}}</p>
+<h3>{{tapa.precio}}€</h3>
+<p>Plato creado el {{tapa.fechaCreacion|date('Y-m-d')}}</p>
+<p>
+  <a href="{{asset("/eliminarTapa/id="~tapa.id)}}">Eliminar tapa</a>
+</p>
+<img src="{{asset(tapa.foto)}}" alt="comida">
