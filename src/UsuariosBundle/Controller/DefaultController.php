@@ -45,4 +45,12 @@ class DefaultController extends Controller
           array('form' => $form->createView())
       );
   }
+
+  /**
+   * @Route("/admin", name="admin")
+   */
+  public function adminAction(Request $request)
+  {
+      return $this->render('UsuariosBundle:Default:index.html.twig');
+  }
 }
